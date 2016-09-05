@@ -68,7 +68,7 @@ class Header
      * @var array
      */
     public static $headers = [
-        'X-Powered-By' => 'Uiweb/2.0'
+        'X-Powered-By' => 'Uiweb/3.0'
     ];
 
     public function __handle()
