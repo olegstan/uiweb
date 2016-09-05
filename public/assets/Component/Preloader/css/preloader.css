@@ -1,0 +1,28 @@
+#popup-preloader{
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.2);
+}
+#popup-preloader-content{
+    border-radius: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #eb9816;
+    border-bottom: 5px solid #eb9816;
+    position: relative;
+    background-color: #ffffff;
+    z-index: 150;
+    left: 40%;
+    top: 25%;
+    width: 20%;
+    text-align: center;
+}
+#popup-preloader-content p{
+    font-family: 'AntiqueOliveBold', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding: 10px;
+}
