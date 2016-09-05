@@ -113,10 +113,10 @@ class RouteCollection
     public static function registerRest(Route $route)
     {
 //        self::register((new Route('single', 'http', 'GET', $route->getRoute() . '/index', 'get_index_' . $route->getAlice(), $route->getController(), 'get' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
-        self::register((new Route('single', 'http', 'GET', $route->getRoute() . '/{id}', 'get_' . $route->getAlice(), $route->getController(), 'get' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
-        self::register((new Route('single', 'http', 'POST', $route->getRoute() . '/{id}', 'post_' . $route->getAlice(), $route->getController(), 'post' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
-        self::register((new Route('single', 'http', 'PUT', $route->getRoute() . '/{id}', 'put_' . $route->getAlice(), $route->getController(), 'put' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
-        self::register((new Route('single', 'http', 'DELETE', $route->getRoute() . '/{id}', 'delete_' . $route->getAlice(), $route->getController(), 'delete' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
+        self::register((new Route('single', 'http', 'GET', $route->getRoute() . '/{id}', 'get.' . $route->getAlice(), $route->getController(), 'get' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
+        self::register((new Route('single', 'http', 'POST', $route->getRoute() . '/{id}', 'post.' . $route->getAlice(), $route->getController(), 'post' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
+        self::register((new Route('single', 'http', 'PUT', $route->getRoute() . '/{id}', 'put.' . $route->getAlice(), $route->getController(), 'put' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
+        self::register((new Route('single', 'http', 'DELETE', $route->getRoute() . '/{id}', 'delete.' . $route->getAlice(), $route->getController(), 'delete' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
     }
 
     public static function registerController(Route $route)
@@ -175,11 +175,6 @@ class RouteCollection
 
 
                     foreach ($routes as $k2 => $route) {
-//                        echo '<pre>';
-//                        var_dump($request_route);
-//                        var_dump($k1);
-//                        var_dump($route->getRouteParameterCollection()->compareRoute($request_route, $k1));
-//                        echo '</pre>';
                         /* @var $route Route */
                         if($route->getRouteParameterCollection()->compareRoute($request_route, $k1)){
                             if (($request_routes_count - 1) === $k1) {

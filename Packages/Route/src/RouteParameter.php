@@ -29,7 +29,6 @@ class RouteParameter
     {
         $this->route = $route;
     }
-
     /**
      * @return string
      */
@@ -37,7 +36,6 @@ class RouteParameter
     {
         return $this->route;
     }
-
     /**
      * @param $route
      */
@@ -45,7 +43,6 @@ class RouteParameter
     {
         $this->route = $route;
     }
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class RouteParameter
     {
         return $this->pattern;
     }
-
     /**
      * @param $pattern
      */
@@ -61,17 +57,25 @@ class RouteParameter
     {
         $this->pattern = $pattern;
     }
-
+    /**
+     * @return bool
+     */
     public function isDynamic()
     {
         return $this->is_dynamic;
     }
 
+    /**
+     * @return string
+     */
     public function getValue()
     {
         return $this->value;
     }
 
+    /**
+     * @param $value
+     */
     public function setValue($value)
     {
         $this->value = $value;
