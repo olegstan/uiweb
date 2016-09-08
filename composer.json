@@ -4,5 +4,14 @@
   },
   "require": {
     "phpoffice/phpexcel": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/",
+      "Uiweb\\": "packages/Uiweb/"
+    }
   }
 }

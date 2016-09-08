@@ -11,17 +11,19 @@ define('ABS', dirname(__FILE__).'/..');
 //require_once(ABS . '//libraries/autoload.php');
 
 //запускаем автолоадер для подгрузки классов на лету
-require_once(ABS . '/Framework/Autoload/Autoloader.php');
+//require_once(ABS . '/Framework/Autoload/Autoloader.php');
 
 require_once(ABS . '/Framework/Debug/Shutdown.php');
 
 //composer autoload
 require_once(ABS . '/vendor/autoload.php');
 
-require_once(ABS . '/config/defines.php');
+//require_once(ABS . '/config/defines.php');
 
-use Framework\Controller\FrontController;
-use Framework\Request\Request;
-use Framework\Route\RouteCollection;
+//use Framework\Controller\FrontController;
+//use Framework\Request\Request;
+//use Framework\Route\RouteCollection;
 
-return (new FrontController(Request::getInstance(), RouteCollection::getInstance()))->init();
+Uiweb\Core::run();
+
+//return (new FrontController(Request::getInstance(), RouteCollection::getInstance()))->init();

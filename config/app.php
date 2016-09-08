@@ -5,5 +5,16 @@ return [
     'log' => true,
 
     //defaults
-    'connection' => 'mysql'
+    'connection' => 'mysql',
+
+    'services' => [
+        
+        'http' => [
+            
+        ],
+        
+        'console' => [
+            
+        ]
+    ]
 ];

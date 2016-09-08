@@ -1,27 +1,6 @@
 User-agent: *
 
-Disallow: /addons/
-Disallow: /account/
-Disallow: /ajax/
-Disallow: /api/
-Disallow: /cart/
-Disallow: /compare/
-Disallow: /compiled/
-Disallow: /config/
-Disallow: /controllers/
-Disallow: /login/
-Disallow: /modules/
-Disallow: /order/
-Disallow: /register/
-Disallow: /smarty/
-Disallow: /system/
-Disallow: /templates/
-Disallow: */action=*
-Disallow: *?keyword=
-Disallow: *?sort=
-Disallow: *?mode=
-Disallow: *?format=
-Disallow: *?logout=
+Disallow: /
 
-Sitemap: http://minicart.su/sitemap.xml
-Host: minicart.su
+Sitemap: http:///sitemap.xml
+Host:

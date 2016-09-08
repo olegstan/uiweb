@@ -1,17 +1,12 @@
 <?php
 namespace Framework;
 
-use Framework\Pattern\PatternTraits\NonStaticTrait;
-use Framework\Pattern\PatternTraits\SingletonTrait;
-
 /**
  * Class Config
  * @package Framework
  */
 class Config
 {
-    use SingletonTrait, NonStaticTrait;
-
     public static $data = [];
 
     /**
@@ -45,7 +40,7 @@ class Config
      * @param $key
      * @return bool
      */
-    public static function exists($file_name, $key)
+    public static function has($file_name, $key)
     {
         return isset(self::$data[$file_name][$key]) ? true : false;
     }
