@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Console;
+namespace Uiweb\Console;
 
 class Console
 {

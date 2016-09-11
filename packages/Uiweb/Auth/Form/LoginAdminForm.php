@@ -1,11 +1,11 @@
 <?php
-namespace Framework\Auth\Form;
+namespace Uiweb\Auth\Form;
 
 use app\layer\LayerModel;
 
 use core\helper\Hash;
 use core\helper\Response;
-use Framework\Model\Types\DatabaseModel;
+use Uiweb\Model\Types\DatabaseModel;
 
 class LoginAdminForm extends DatabaseModel
 {

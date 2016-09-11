@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Auth\User;
+namespace Uiweb\Auth\User;
 
 //use app\layer\LayerModel;
 

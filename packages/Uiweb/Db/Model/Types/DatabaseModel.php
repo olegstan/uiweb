@@ -1,13 +1,13 @@
 <?php
-namespace Framework\Model\Types;
+namespace Uiweb\Model\Types;
 
-use Framework\Config;
-use Framework\Db\ModelQueryBuilder;
-use Framework\Model\Model;
-use Framework\Model\Collection;
+use Uiweb\Config;
+use Uiweb\Db\ModelQueryBuilder;
+use Uiweb\Model\Model;
+use Uiweb\Model\Collection;
 /**
  * Class DatabaseModel
- * @package Framework\Model\Types
+ * @package Uiweb\Model\Types
  */
 class DatabaseModel extends Model
 {

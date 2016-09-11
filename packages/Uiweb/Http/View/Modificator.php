@@ -1,5 +1,5 @@
 <?php
-namespace Framework\View;
+namespace Uiweb\View;
 
 class Modificator
 {

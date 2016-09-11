@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Db;
+namespace Uiweb\Db;
 /**
  * Class Field
- * @package Framework\Schema
+ * @package Uiweb\Schema
  */
 class Field
 {

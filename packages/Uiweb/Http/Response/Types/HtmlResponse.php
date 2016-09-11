@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Response\Types;
+namespace Uiweb\Response\Types;
 
-use Framework\Response\HttpResponse;
-use Framework\Http\Header;
+use Uiweb\Response\HttpResponse;
+use Uiweb\Http\Header;
 
 class HtmlResponse extends HttpResponse
 {

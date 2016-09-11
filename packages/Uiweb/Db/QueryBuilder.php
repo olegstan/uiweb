@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Db;
+namespace Uiweb\Db;
 
-use Framework\Db\SqlConnectors\MysqlDbConnect;
+use Uiweb\Db\SqlConnectors\MysqlDbConnect;
 use PDO;
 use PDOStatement;
 

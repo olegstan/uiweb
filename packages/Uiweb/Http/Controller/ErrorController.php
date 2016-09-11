@@ -1,10 +1,10 @@
 <?php
-namespace Framework\Controller;
+namespace Uiweb\Controller;
 
-use Framework\Http\Header;
-use Framework\Request\Types\HttpRequest;
-use Framework\Request\Request;
-use Framework\Response\Response;
+use Uiweb\Http\Header;
+use Uiweb\Request\Types\HttpRequest;
+use Uiweb\Request\Request;
+use Uiweb\Response\Response;
 
 abstract class ErrorController
 {
@@ -21,6 +21,4 @@ abstract class ErrorController
                 }
         }
     }
-
-
 }

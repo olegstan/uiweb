@@ -5,5 +5,10 @@ return [
      *
      * 'files', 'mysql', 'redis'
      */
-    'handler' => 'files'
+    'handler' => 'files',
+
+    'hash' => [
+        'cost' => '10', // цена алгоритмического расхода
+        'salt' => 'a25jlfAsdaag42Asdasdaf', // соль хеширования
+    ]
 ];

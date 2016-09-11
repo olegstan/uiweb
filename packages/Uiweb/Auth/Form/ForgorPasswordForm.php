@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Auth\Form;
+namespace Uiweb\Auth\Form;
 
-use Framework\Model\Types\DatabaseModel;
+use Uiweb\Model\Types\DatabaseModel;
 
 class ForgotPasswordForm extends DatabaseModel
 {

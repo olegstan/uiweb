@@ -1,14 +1,11 @@
 <?php
-namespace Framework\Auth;
+namespace Uiweb\Auth;
 
-use Framework\Auth\User\User;
-use Framework\Config;
-use Framework\Pattern\PatternTraits\SingletonTrait;
-use Framework\Pattern\PatternTraits\NonStaticTrait;
+use Uiweb\Auth\User\User;
+use Uiweb\Config;
 
 class Session
 {
-    use SingletonTrait, NonStaticTrait;
 
     /**
      * @var array

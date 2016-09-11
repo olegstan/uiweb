@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Model;
+namespace Uiweb\Model;
 
-use Framework\Validation\Interfaces\Validateble;
-use Framework\Validation\ValidationTraits\ValidationTrait;
+use Uiweb\Validation\Interfaces\Validateble;
+use Uiweb\Validation\ValidationTraits\ValidationTrait;
 
 abstract class Model
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Framework\FileSystem\Exceptions;
+namespace Uiweb\FileSystem\Exceptions;
 
 use Exception;
 

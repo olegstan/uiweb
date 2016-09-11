@@ -1,10 +1,10 @@
 <?php
-namespace Framework\Cart;
+namespace Uiweb\Cart;
 
-use Framework\Cart\Drivers\CacheCart;
-use Framework\Cart\Drivers\DatabaseCart;
-use Framework\Cart\Drivers\SessionCart;
-use Framework\Config;
+use Uiweb\Cart\Drivers\CacheCart;
+use Uiweb\Cart\Drivers\DatabaseCart;
+use Uiweb\Cart\Drivers\SessionCart;
+use Uiweb\Config;
 
 class Cart
 {
@@ -54,7 +54,7 @@ class Cart
             $class_name = Config::get('cart', 'product');
             $class = new $class_name;
             /**
-             * Framework\Model\Types\DatabaseModel $class
+             * Uiweb\Model\Types\DatabaseModel $class
              */
             $products = $class
                 ->getQuery()

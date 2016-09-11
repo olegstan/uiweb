@@ -10,13 +10,7 @@ Route::get('assets/img/resized/{folder}/{product}/{file_name}', 'images', \App\C
 
 //auth user
 
-Route::group('user/', [], function(){
-    Route::get('login', 'login', \App\Controllers\Http\UserController::class, 'login');
-    Route::get('register', 'register', \App\Controllers\Http\UserController::class, 'register');
-    Route::get('new-password', 'new_password', \App\Controllers\Http\UserController::class, 'newPassword');
-    Route::get('forgot-password', 'forgot_password', \App\Controllers\Http\UserController::class, 'forgotPassword');
-    Route::get('logout', 'logout', \App\Controllers\Http\UserController::class, 'logout');
-});
+
 
 
 Route::get('about', 'about', \App\Controllers\Http\IndexController::class, 'about');

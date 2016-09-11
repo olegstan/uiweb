@@ -1,5 +1,5 @@
 <?php
-namespace Framework\FileSystem;
+namespace Uiweb\FileSystem;
 
 class FileSystem
 {

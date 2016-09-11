@@ -1,9 +1,9 @@
 <?php
-namespace Framework\Response\Types;
+namespace Uiweb\Response\Types;
 
-use Framework\Response\HttpResponse;
-use Framework\Http\Header;
-use Framework\Interfaces\Data\Jsonable;
+use Uiweb\Response\HttpResponse;
+use Uiweb\Http\Header;
+use Uiweb\Interfaces\Data\Jsonable;
 
 class JsonResponse extends HttpResponse implements Jsonable
 {

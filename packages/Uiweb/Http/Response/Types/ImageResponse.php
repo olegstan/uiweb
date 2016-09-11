@@ -1,9 +1,9 @@
 <?php
-namespace Framework\Response\Types;
+namespace Uiweb\Response\Types;
 
-use Framework\FileSystem\Image;
-use Framework\Response\HttpResponse;
-use Framework\Http\Header;
+use Uiweb\FileSystem\Image;
+use Uiweb\Response\HttpResponse;
+use Uiweb\Http\Header;
 
 class ImageResponse extends HttpResponse
 {

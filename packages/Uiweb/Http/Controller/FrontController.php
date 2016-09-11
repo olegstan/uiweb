@@ -1,13 +1,13 @@
 <?php
-namespace Framework\Controller;
+namespace Uiweb\Controller;
 
-use Framework\Core;
-use Framework\Request\Request;
-use Framework\Response\ConsoleResponse;
-use Framework\Response\Response;
-use Framework\Route\Exceptions\NotFoundRouteException;
-use Framework\Route\RouteCollection;
-use Framework\Route\RouteReflection;
+use Uiweb\Core;
+use Uiweb\Request\Request;
+use Uiweb\Response\ConsoleResponse;
+use Uiweb\Response\Response;
+use Uiweb\Route\Exceptions\NotFoundRouteException;
+use Uiweb\Route\RouteCollection;
+use Uiweb\Route\RouteReflection;
 
 class FrontController
 {

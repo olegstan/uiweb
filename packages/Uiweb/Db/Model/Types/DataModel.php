@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Model\Types;
+namespace Uiweb\Model\Types;
 
-use Framework\Model\Model;
+use Uiweb\Model\Model;
 
 abstract class DataModel extends Model
 {

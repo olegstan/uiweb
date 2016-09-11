@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Db;
+namespace Uiweb\Db;
 
-use Framework\Config;
+use Uiweb\Config;
 
 class Table
 {

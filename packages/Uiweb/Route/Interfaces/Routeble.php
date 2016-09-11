@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Route\Interfaces;
+namespace Uiweb\Route\Interfaces;
 
 interface Routeble
 {

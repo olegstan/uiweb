@@ -1,5 +1,7 @@
 <?php
-namespace Framework\Hash;
+namespace Uiweb\Hash;
+
+use Uiweb\Config;
 
 class Hash
 {
@@ -14,16 +16,9 @@ class Hash
      */
     public static function password($str)
     {
-        $path = ABS . '/config/config.php';
-        if(file_exists($path)){
-            $config = require($path);
-        }else{
-            die(__FILE__ . ' ' . __LINE__ . 'Не найден файл с настройками: ' . $path);
-        }
-
         self::$options = [
-            'cost' => $config['hash_cost'],
-            'salt' => $config['hash_salt']
+            'cost' => Config::get('auth.hash.cost'),
+            'salt' => Config::get('auth.hash.salt')
         ];
 
         return password_hash($str, PASSWORD_BCRYPT, self::$options);
@@ -38,13 +33,4 @@ class Hash
     {
         return password_verify($str, $hash);
     }
-
-    /**
-     * @param $length
-     */
-    public function random($length)
-    {
-
-    }
-
 }

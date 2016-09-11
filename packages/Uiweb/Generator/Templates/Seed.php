@@ -2,10 +2,10 @@
 return '<?php
 namespace Database\Seeds;
 
-use Framework\Model\Types\DatabaseModel;
-use Framework\Schema\Seed;
+use Uiweb\Model\Types\DatabaseModel;
+use Uiweb\Schema\Seed;
 
-class ' . \Framework\Text\Inflector::camelize($name) . ' extends Seed
+class ' . \Uiweb\Text\Inflector::camelize($name) . ' extends Seed
 {
     public function getName()
     {

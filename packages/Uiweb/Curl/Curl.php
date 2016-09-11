@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Curl;
+namespace Uiweb\Curl;
 
 class Curl
 {

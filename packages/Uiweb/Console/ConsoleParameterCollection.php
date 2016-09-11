@@ -1,12 +1,12 @@
 <?php
-namespace Framework\Console;
+namespace Uiweb\Console;
 
-use Framework\Pattern\PatternTraits\NonStaticTrait;
-use Framework\Pattern\PatternTraits\SingletonTrait;
+use Uiweb\Pattern\PatternTraits\NonStaticTrait;
+use Uiweb\Pattern\PatternTraits\SingletonTrait;
 
 /**
  * Class ConsoleParameterCollection
- * @package Framework\Console
+ * @package Uiweb\Console
  */
 class ConsoleParameterCollection
 {

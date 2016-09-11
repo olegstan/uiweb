@@ -1,14 +1,14 @@
 <?php
-namespace Framework\View;
+namespace Uiweb\View;
 
-use Framework\Route\Route;
-use Framework\Route\RouteCollection;
-use Framework\Route\RouteParameterCollection;
-use Framework\Route\RouteParameter;
+use Uiweb\Route\Route;
+use Uiweb\Route\RouteCollection;
+use Uiweb\Route\RouteParameterCollection;
+use Uiweb\Route\RouteParameter;
 
 /**
  * Class Url
- * @package Framework\View
+ * @package Uiweb\View
  */
 class Url
 {
@@ -31,7 +31,7 @@ class Url
      * @param array $routes
      * @param array $parameteters
      * @return string
-     * @throws \Framework\Route\Exceptions\NotFoundRouteException
+     * @throws \Uiweb\Route\Exceptions\NotFoundRouteException
      */
     public function route($alice, array $routes = [], array $parameteters = [])
     {

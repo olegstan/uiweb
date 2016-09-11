@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Schema;
+namespace Uiweb\Schema;
 
-use Framework\Db\Table;
+use Uiweb\Db\Table;
 
 class Migration
 {

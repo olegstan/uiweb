@@ -1,7 +1,6 @@
 <?php
 namespace Uiweb;
 
-
 class App
 {
     /**
@@ -23,7 +22,7 @@ class App
      */
     public static function getServiceProviders()
     {
-        return Config::get('app', 'services.' . Request::getType());
+        return Config::get('app.services.' . Request::getType());
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Controller;
+namespace Uiweb\Controller;
 
-use Framework\Console\Console;
-use Framework\Response\ConsoleResponse;
+use Uiweb\Console\Console;
+use Uiweb\Response\ConsoleResponse;
 
 abstract class ConsoleController
 {

@@ -2,8 +2,8 @@
 namespace App\Controllers\Http;
 
 use App\Layers\LayerHttpController;
-use Framework\Auth\Auth;
-use Framework\Response\Types\HtmlResponse;
+use Uiweb\Auth\Auth;
+use Uiweb\Response\Types\HtmlResponse;
 use App\Layers\LayerView as View;
 
 class UserController extends LayerHttpController

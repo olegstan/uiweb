@@ -1,18 +1,18 @@
 <?php
-namespace Framework\Route;
+namespace Uiweb\Route;
 
-use Framework\Config;
-use Framework\Request\Request;
-use Framework\Request\Types\HttpRequest;
-use Framework\Response\Response;
-use Framework\Route\Exceptions\NotFoundMethodException;
-use Framework\Route\RouteCollection;
+use Uiweb\Config;
+use Uiweb\Request\Request;
+use Uiweb\Request\Types\HttpRequest;
+use Uiweb\Response\Response;
+use Uiweb\Route\Exceptions\NotFoundMethodException;
+use Uiweb\Route\RouteCollection;
 use ReflectionClass;
 use ReflectionMethod;
 
 /**
  * Class RouteReflection
- * @package Framework\Route
+ * @package Uiweb\Route
  */
 class RouteReflection extends ReflectionClass
 {
@@ -42,7 +42,7 @@ class RouteReflection extends ReflectionClass
 
 
     /**
-     * @param \Framework\Route\RouteCollection $route
+     * @param \Uiweb\Route\RouteCollection $route
      */
     public function __construct(RouteCollection $route)
     {

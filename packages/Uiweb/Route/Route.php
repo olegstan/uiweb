@@ -1,11 +1,11 @@
 <?php
-namespace Framework\Route;
+namespace Uiweb\Route;
 
 use Closure;
-use Framework\Route\Interfaces\Routeble;
+use Uiweb\Route\Interfaces\Routeble;
 /**
  * Class Route
- * @package Framework\Route
+ * @package Uiweb\Route
  */
 class Route implements Routeble
 {

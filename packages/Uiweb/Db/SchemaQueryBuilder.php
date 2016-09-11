@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Db;
+namespace Uiweb\Db;
 
 class SchemaQueryBuilder extends QueryBuilder
 {

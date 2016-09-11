@@ -10,19 +10,17 @@ class Config
     public static $data = [];
 
     /**
-     * @param $fileName
-     * @param $key 'to.do.to.do'
+     * @param $key
      * @return mixed
      */
-    public static function get($fileName, $key)
+    public static function get($key)
     {
-        $path = self::getFilePath($fileName);
-        
-        //TODO cache
-        
-        $array = require($path);
 
         $keys = explode('.', $key);
+
+        $path = self::getFilePath(array_shift($keys));
+
+        $array = require($path);
 
         foreach ($keys as $key) {
             $array = &$array[$key];
@@ -51,15 +49,14 @@ class Config
      * @param $key
      * @return bool
      */
-    public static function has($fileName, $key)
+    public static function has($key)
     {
-        $path = self::getFilePath($fileName);
-
-        //TODO cache
-
-        $array = require($path);
 
         $keys = explode('.', $key);
+
+        $path = self::getFilePath(array_shift($keys));
+
+        $array = require($path);
 
         foreach ($keys as $key) {
             if(isset($array[$key])){

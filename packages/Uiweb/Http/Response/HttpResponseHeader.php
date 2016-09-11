@@ -1,9 +1,9 @@
 <?php
-namespace Framework\Http;
+namespace Uiweb\Http;
 
-use Framework\FileSystem\Image;
-use Framework\Pattern\PatternTraits\NonStaticTrait;
-use Framework\Pattern\PatternTraits\SingletonTrait;
+use Uiweb\FileSystem\Image;
+use Uiweb\Pattern\PatternTraits\NonStaticTrait;
+use Uiweb\Pattern\PatternTraits\SingletonTrait;
 
 class Header
 {

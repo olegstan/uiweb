@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Model\DatabaseModels;
+namespace Uiweb\Model\DatabaseModels;
 
-use Framework\Model\Types\DatabaseModel;
+use Uiweb\Model\Types\DatabaseModel;
 
 class Migration extends DatabaseModel
 {

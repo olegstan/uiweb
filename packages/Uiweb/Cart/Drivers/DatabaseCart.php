@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Cart\Drivers;
+namespace Uiweb\Cart\Drivers;
 
 class DatabaseCart
 {

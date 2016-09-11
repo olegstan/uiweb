@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Response;
+namespace Uiweb\Response;
 
-use Framework\Console\Console;
+use Uiweb\Console\Console;
 
 class ConsoleResponse extends Response
 {

@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Model;
+namespace Uiweb\Model;
 /**
  * Class Field
- * @package Framework\Model
+ * @package Uiweb\Model
  */
 class Field
 {

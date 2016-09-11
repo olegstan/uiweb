@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Schema;
+namespace Uiweb\Schema;
 
 class Database
 {

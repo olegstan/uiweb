@@ -1,13 +1,13 @@
 <?php
-namespace Framework\Db;
+namespace Uiweb\Db;
 
-use Framework\Model\Collection;
-use Framework\Model\Model;
+use Uiweb\Model\Collection;
+use Uiweb\Model\Model;
 use PDO;
 
 /**
  * Class ModelQueryBuilder
- * @package Framework\Model
+ * @package Uiweb\Model
  * TODO regenerate phpdoc
  */
 class ModelQueryBuilder extends QueryBuilder

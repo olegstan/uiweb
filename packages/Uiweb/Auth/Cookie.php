@@ -1,9 +1,9 @@
 <?php
 namespace Uiweb\Auth;
 
-use Framework\Auth\User\User;
-use Framework\Pattern\PatternTraits\SingletonTrait;
-use Framework\Pattern\PatternTraits\NonStaticTrait;
+use Uiweb\Auth\User\User;
+use Uiweb\Pattern\PatternTraits\SingletonTrait;
+use Uiweb\Pattern\PatternTraits\NonStaticTrait;
 
 class Cookie
 {

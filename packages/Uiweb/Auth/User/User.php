@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Auth\User;
+namespace Uiweb\Auth\User;
 
-use Framework\Model\Types\DatabaseModel;
+use Uiweb\Model\Types\DatabaseModel;
 
 class User extends DatabaseModel
 {

@@ -2,11 +2,11 @@
 return '<?php
 namespace Database\Migrations;
 
-use Framework\Schema\Migration;
-use Framework\Db\Table;
-use Framework\Schema\Schema;
+use Uiweb\Schema\Migration;
+use Uiweb\Db\Table;
+use Uiweb\Schema\Schema;
 
-class ' . \Framework\Text\Inflector::camelize($name) . ' extends Migration
+class ' . \Uiweb\Text\Inflector::camelize($name) . ' extends Migration
 {
     public function getDate()
     {

@@ -1,11 +1,11 @@
 <?php
-namespace Framework\Cart\Drivers;
+namespace Uiweb\Cart\Drivers;
 
-use Framework\Auth\Session;
+use Uiweb\Auth\Session;
 
 /**
  * Class SessionCart
- * @package Framework\Cart\Drivers
+ * @package Uiweb\Cart\Drivers
  */
 class SessionCart
 {

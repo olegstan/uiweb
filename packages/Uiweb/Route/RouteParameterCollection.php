@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Route;
+namespace Uiweb\Route;
 /**
  * Class RouteParameterCollection
- * @package Framework\Route
+ * @package Uiweb\Route
  */
 class RouteParameterCollection
 {

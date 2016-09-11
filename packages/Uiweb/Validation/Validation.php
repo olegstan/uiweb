@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Validation;
+namespace Uiweb\Validation;
 
 //URL multicheckbox unique
 class Validation

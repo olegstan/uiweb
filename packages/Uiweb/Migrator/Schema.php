@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Schema;
+namespace Uiweb\Schema;
 
 use Closure;
-use Framework\Db\Table;
+use Uiweb\Db\Table;
 
 class Schema
 {

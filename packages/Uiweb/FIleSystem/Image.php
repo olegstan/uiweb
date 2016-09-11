@@ -1,9 +1,9 @@
 <?php
-namespace Framework\FileSystem;
+namespace Uiweb\FileSystem;
 
-use Framework\Config;
-use Framework\Resize\ResizeGd;
-use Framework\Resize\ResizeImagick;
+use Uiweb\Config;
+use Uiweb\Resize\ResizeGd;
+use Uiweb\Resize\ResizeImagick;
 
 class Image extends File
 {

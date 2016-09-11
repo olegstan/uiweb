@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Curl;
+namespace Uiweb\Curl;
 /**
  * Class CurlResponse
- * @package Framework\Curl
+ * @package Uiweb\Curl
  */
 class CurlResponse
 {

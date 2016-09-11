@@ -1,12 +1,12 @@
 <?php
-namespace Framework\Controller;
+namespace Uiweb\Controller;
 
-use Framework\Config;
-use Framework\Http\Header;
-use Framework\Request\Types\HttpRequest;
-use Framework\Response\Types\HtmlResponse;
-use Framework\Response\Types\JsonResponse;
-use Framework\View\View;
+use Uiweb\Config;
+use Uiweb\Http\Header;
+use Uiweb\Request\Types\HttpRequest;
+use Uiweb\Response\Types\HtmlResponse;
+use Uiweb\Response\Types\JsonResponse;
+use Uiweb\View\View;
 
 class HttpController
 {

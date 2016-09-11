@@ -1,8 +1,8 @@
 <?php
-namespace Framework\Request\Types;
+namespace Uiweb\Request\Types;
 
-use Framework\Console\ConsoleParameterCollection;
-use Framework\Request\Request;
+use Uiweb\Console\ConsoleParameterCollection;
+use Uiweb\Request\Request;
 
 class ConsoleRequest extends Request
 {

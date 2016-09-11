@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Route\Interfaces;
+namespace Uiweb\Route\Interfaces;
 
-use Framework\Request\Interfaces\Requestable;
+use Uiweb\Request\Interfaces\Requestable;
 use Closure;
 
 interface Middlewareble

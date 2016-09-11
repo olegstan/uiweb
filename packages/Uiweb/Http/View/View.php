@@ -1,10 +1,10 @@
 <?php
-namespace Framework\View;
+namespace Uiweb\View;
 
-use Framework\Auth\Auth;
-use Framework\Route\Exceptions\NotFoundRouteException;
-use Framework\View\Exceptions\ContentKeyIssetException;
-use Framework\View\Exceptions\NotFoundViewException;
+use Uiweb\Auth\Auth;
+use Uiweb\Route\Exceptions\NotFoundRouteException;
+use Uiweb\View\Exceptions\ContentKeyIssetException;
+use Uiweb\View\Exceptions\NotFoundViewException;
 
 class View
 {

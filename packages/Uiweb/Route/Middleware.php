@@ -1,9 +1,9 @@
 <?php
-namespace Framework\Route;
+namespace Uiweb\Route;
 
-use Framework\Request\Interfaces\Requestable;
+use Uiweb\Request\Interfaces\Requestable;
 use Closure;
-use Framework\Route\Interfaces\Middlewareble;
+use Uiweb\Route\Interfaces\Middlewareble;
 
 abstract class Middleware implements Middlewareble
 {

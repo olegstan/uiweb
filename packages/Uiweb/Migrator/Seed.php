@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Schema;
+namespace Uiweb\Schema;
 
-use Framework\Model\Types\DatabaseModel;
+use Uiweb\Model\Types\DatabaseModel;
 
 class Seed
 {

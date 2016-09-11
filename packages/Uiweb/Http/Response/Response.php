@@ -1,13 +1,13 @@
 <?php
-namespace Framework\Response;
+namespace Uiweb\Response;
 
-use Framework\Response\Types\HtmlResponse;
-use Framework\Response\Types\JsonResponse;
-use Framework\Response\Types\XmlResponse;
+use Uiweb\Response\Types\HtmlResponse;
+use Uiweb\Response\Types\JsonResponse;
+use Uiweb\Response\Types\XmlResponse;
 
 /**
  * Class Response
- * @package Framework\Http
+ * @package Uiweb\Http
  */
 class Response
 {

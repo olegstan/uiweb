@@ -1,7 +1,7 @@
 <?php
-namespace Framework\Generator;
+namespace Uiweb\Generator;
 
-use Framework\Text\Inflector;
+use Uiweb\Text\Inflector;
 
 class Generator
 {
@@ -32,7 +32,7 @@ class Generator
 
     public function getTemplateFilePath()
     {
-        $path = ABS . '/framework/Generator/Templates/';
+        $path = ABS . '/Uiweb/Generator/Templates/';
 
         $file = '';
         switch($this->getType()){

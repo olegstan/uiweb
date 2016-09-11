@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Model;
+namespace Uiweb\Model;
 
 use Iterator;
 

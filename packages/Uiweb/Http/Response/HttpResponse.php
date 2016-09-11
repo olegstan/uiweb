@@ -1,10 +1,10 @@
 <?php
-namespace Framework\Response;
+namespace Uiweb\Response;
 
-use Framework\Response\Types\HtmlResponse;
-use Framework\Response\Types\JsonResponse;
-use Framework\Response\Types\XmlResponse;
-use Framework\Http\Header;
+use Uiweb\Response\Types\HtmlResponse;
+use Uiweb\Response\Types\JsonResponse;
+use Uiweb\Response\Types\XmlResponse;
+use Uiweb\Http\Header;
 
 class HttpResponse extends Response
 {

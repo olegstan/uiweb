@@ -1,7 +1,7 @@
 <?php
-namespace Framework\FileSystem;
+namespace Uiweb\FileSystem;
 
-use Framework\FileSystem\FileSystem;
+use Uiweb\FileSystem\FileSystem;
 
 class Folder extends FileSystem
 {

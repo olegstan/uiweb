@@ -1,16 +1,15 @@
 <?php
-namespace Framework\Route;
+namespace Uiweb\Route;
 
-use Framework\Request\Types\ConsoleRequest;
-use Framework\Request\Types\HttpRequest;
-use Framework\Pattern\PatternTraits\SingletonTrait;
-use Framework\Request\Request;
-use Framework\Route\Exceptions\AliceDublicatException;
-use Framework\Route\Exceptions\NotFoundRouteException;
+use Uiweb\Request\Types\ConsoleRequest;
+use Uiweb\Request\Types\HttpRequest;
+use Uiweb\Pattern\PatternTraits\SingletonTrait;
+use Uiweb\Request\Request;
+use Uiweb\Route\Exceptions\AliceDublicatException;
+use Uiweb\Route\Exceptions\NotFoundRouteException;
 
 class RouteCollection
 {
-    use SingletonTrait;
     /**
      * @var array
      */
@@ -37,13 +36,6 @@ class RouteCollection
      */
     public static $currentRoute;
 
-    /**
-     * @return $this
-     */
-    public function __handle()
-    {
-        return $this->registerFile();
-    }
 
     public function registerRoutes()
     {
@@ -108,7 +100,6 @@ class RouteCollection
 
     /**
      * @param Route $route
-     * @param object $model
      */
     public static function registerRest(Route $route)
     {

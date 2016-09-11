@@ -1,17 +1,17 @@
 <?php
-namespace Framework\Request\Types;
+namespace Uiweb\Request\Types;
 
-use Framework\Auth\Cookie;
-use Framework\Auth\Session;
-use Framework\Config;
-use Framework\FileSystem\File;
-use Framework\FileSystem\TemporaryFile;
-use Framework\Request\Request;
-use Framework\Route\RouteCollection;
+use Uiweb\Auth\Cookie;
+use Uiweb\Auth\Session;
+use Uiweb\Config;
+use Uiweb\FileSystem\File;
+use Uiweb\FileSystem\TemporaryFile;
+use Uiweb\Request\Request;
+use Uiweb\Route\RouteCollection;
 
 /**
  * Class HttpRequest
- * @package Framework\Http\Requests
+ * @package Uiweb\Http\Requests
  */
 class HttpRequest extends Request
 {
@@ -310,7 +310,7 @@ class HttpRequest extends Request
 
     public static function getRoute($key)
     {
-        /* @var $parameter \Framework\Route\RouteParameter */
+        /* @var $parameter \Uiweb\Route\RouteParameter */
         $parameter = RouteCollection::getInstance()->getCurrentRoute()->getRouteParameterCollection()->getRouteByKey($key);
         return $parameter ? $parameter->getValue() : null;
     }

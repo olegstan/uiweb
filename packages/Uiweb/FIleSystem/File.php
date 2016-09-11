@@ -1,8 +1,8 @@
 <?php
-namespace Framework\FileSystem;
+namespace Uiweb\FileSystem;
 
-use Framework\FileSystem\Exceptions\NotExistsExeption;
-use Framework\FileSystem\Exceptions\NotWritableException;
+use Uiweb\FileSystem\Exceptions\NotExistsExeption;
+use Uiweb\FileSystem\Exceptions\NotWritableException;
 
 class File extends FileSystem
 {
