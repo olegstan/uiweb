@@ -9,10 +9,10 @@ return [
 
     'services' => [
         'http' => [
-            Uiweb\Http\HttpServiceProvider::class
+            Uiweb\Auth\AuthServiceProvider::class
         ],
         'console' => [
-            Uiweb\Console\ConsoleServiceProvider::class
+            
         ]
     ]
 ];

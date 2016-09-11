@@ -2,25 +2,29 @@
 namespace Uiweb\Auth;
 
 use Uiweb\Auth\User\User;
-use Uiweb\Pattern\PatternTraits\SingletonTrait;
-use Uiweb\Pattern\PatternTraits\NonStaticTrait;
 
+/**
+ * Class Cookie
+ * @package Uiweb\Auth
+ */
 class Cookie
 {
-    use SingletonTrait, NonStaticTrait;
-
+    /**
+     * @var array
+     */
     public $cookie;
 
+    /**
+     * Cookie constructor.
+     */
     public function __construct()
     {
         $this->cookie =& $_COOKIE;
     }
 
-    public function __handle()
-    {
-        return $this;
-    }
-
+    /**
+     * @return bool|int
+     */
     public function isAuth()
     {
         if(isset($this->cookie['auth'])){
@@ -50,6 +54,9 @@ class Cookie
         }
     }
 
+    /**
+     * @param User $user
+     */
     public function login(User $user)
     {
         $current_time = date('Y-m-d H:i:s');
@@ -61,6 +68,9 @@ class Cookie
         $user->update();
     }
 
+    /**
+     * 
+     */
     public function logout()
     {
         unset($this->cookie['auth']);

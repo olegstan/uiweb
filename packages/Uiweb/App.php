@@ -28,20 +28,33 @@ class App
     /**
      * @var ServiceProvider[]
      */
-    public static $pool = [];
+    public static $poolServiceProviders = [];
+    /**
+     * @var array
+     */
+    public static $poolSingletons = [];
 
     /**
      * @param array $providers
      */
     public static function resolveDependencies($providers)
     {
-
         foreach ($providers as $provider){
             /**
              * @var string $provider
              */
-            self::$pool[$provider] = new $provider;
-            self::resolveDependencies(self::$pool[$provider]->getDepencies());
+            if(!isset(self::$poolServiceProviders[$provider])){
+                self::$poolServiceProviders[$provider] = new $provider;
+                self::resolveDependencies(self::$poolServiceProviders[$provider]->getDepencies());
+            }
         }
+    }
+    
+    public static function resolve($namespace)
+    {
+        if(!self::$poolSingletons[$namespace]){
+            self::$poolSingletons[$namespace] = new $namespace;
+        }
+        return self::$poolSingletons[$namespace];
     }
 }

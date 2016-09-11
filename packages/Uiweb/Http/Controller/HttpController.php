@@ -20,7 +20,7 @@ class HttpController
         if(HttpRequest::isAjax()){
             return new JsonResponse(['error' => $text], $status);
         }else{
-            $class_name = Config::get('error', 'view');
+            $class_name = Config::get('error.view');
             return new HtmlResponse(new $class_name('errors/' . $status . '.php', [
                 'text' => $text
             ]), $status);

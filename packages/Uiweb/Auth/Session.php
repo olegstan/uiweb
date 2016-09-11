@@ -21,6 +21,9 @@ class Session
         self::load();
     }
 
+    /**
+     * 
+     */
     public static function load()
     {
         if(!self::$is_loaded){
@@ -31,16 +34,7 @@ class Session
     }
 
     /**
-     * @return $this
-     */
-    public function __handle()
-    {
-        self::load();
-        return $this;
-    }
-
-    /**
-     *
+     * 
      */
     public static function start()
     {
@@ -87,12 +81,18 @@ class Session
         }
     }
 
+    /**
+     * @return bool
+     */
     public function isAuth()
     {
         self::load();
         return isset(self::$session['auth']) && self::$session['auth'] === 1;
     }
 
+    /**
+     * @param User $user
+     */
     public function login(User $user)
     {
         self::load();
@@ -100,6 +100,9 @@ class Session
         self::$session['id'] = $user->id;
     }
 
+    /**
+     * 
+     */
     public function logout()
     {
         self::load();
@@ -107,18 +110,29 @@ class Session
         unset(self::$session['id']);
     }
 
+    /**
+     * @param $key
+     * @param $value
+     */
     public static function set($key, $value)
     {
         self::load();
         self::$session[$key] = $value;
     }
 
+    /**
+     * @param $key
+     */
     public static function delete($key)
     {
         self::load();
         unset(self::$session[$key]);
     }
 
+    /**
+     * @param $key
+     * @return mixed|null
+     */
     public static function get($key)
     {
         self::load();
@@ -129,6 +143,10 @@ class Session
         }
     }
 
+    /**
+     * @param $key
+     * @return bool
+     */
     public static function has($key)
     {
         self::load();
@@ -139,12 +157,22 @@ class Session
         }
     }
 
+    /**
+     * @param $root
+     * @param $key
+     * @param $value
+     */
     public static function multiSet($root, $key, $value)
     {
         self::load();
         self::$session[$root][$key] = $value;
     }
 
+    /**
+     * @param $root
+     * @param $key
+     * @return null
+     */
     public static function multiGet($root, $key)
     {
         self::load();
@@ -155,6 +183,11 @@ class Session
         }
     }
 
+    /**
+     * @param $root
+     * @param $key
+     * @return bool
+     */
     public static function multiHas($root, $key)
     {
         self::load();
@@ -165,6 +198,10 @@ class Session
         }
     }
 
+    /**
+     * @param $root
+     * @param $key
+     */
     public static function multiDelete($root, $key)
     {
         self::load();

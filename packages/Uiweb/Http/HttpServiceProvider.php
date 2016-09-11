@@ -11,9 +11,7 @@ class HttpServiceProvider extends ServiceProvider
     public function getDepencies()
     {
         return [
-            FileSystemServiceProvider::class,
-            RouteServiceProvider::class,
-            AuthServiceProvider::class
+            RouteServiceProvider::class
         ];
     }
 

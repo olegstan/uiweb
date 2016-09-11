@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Http;
+namespace Uiweb\Auth\Http\Controllers;
 
 use App\Layers\LayerHttpController;
 use Uiweb\Auth\Auth;

@@ -13,6 +13,9 @@ return [
         'charset' => 'utf8', // кодировка
         //'prefix' => 'mc_', // префикс таблиц
     ],
+    /**
+     * 
+     */
     'information_schema' => [
 
     ]

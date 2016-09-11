@@ -1,9 +1,8 @@
 <?php
 namespace Uiweb\Auth;
 
+use Uiweb\App;
 use Uiweb\Auth\User\User;
-use Uiweb\Pattern\PatternTraits\NonStaticTrait;
-use Uiweb\Pattern\PatternTraits\SingletonTrait;
 
 /**
  * Class Auth
@@ -11,8 +10,6 @@ use Uiweb\Pattern\PatternTraits\SingletonTrait;
  */
 class Auth
 {
-    use SingletonTrait, NonStaticTrait;
-
     /**
      * @var Session
      */
@@ -22,47 +19,36 @@ class Auth
      */
     private static $cookie;
     /**
-     * @var bool
-     */
-    public static $is_auth;
-    /**
-     * @var bool
-     */
-    public static $is_admin;
-    /**
      * @var User
      */
     public static $user;
 
     /**
-     *
+     * @return Session
      */
-    public function __construct()
-    {
-
-    }
-
-    public function __handle()
-    {
-        self::$session = Session::getInstance();
-        self::$cookie = Cookie::getInstance();
-        return $this;
-    }
-
     public static function getSession()
     {
-        return self::$session = Session::getInstance();
+        if(!self::$session){
+            self::$session = App::resolve(Session::class);
+        }
+        return self::$session;
     }
 
+    /**
+     * @return Cookie
+     */
     public static function getCookie()
     {
-        return self::$cookie = Cookie::getInstance();
+        if(!self::$cookie){
+            self::$cookie = App::resolve(Cookie::class);
+        }
+        return self::$cookie;
     }
 
     /**
      * @return bool
      */
-    public static function isAuth()
+    public static function check()
     {
         /**
          * @var int $id
@@ -76,6 +62,7 @@ class Auth
 
     /**
      * @param $id
+     * @param bool $remember
      * @return bool
      */
     public static function login($id, $remember = false)
@@ -96,6 +83,9 @@ class Auth
         }
     }
 
+    /**
+     * @return User
+     */
     public static function getUser()
     {
         return self::$user;
