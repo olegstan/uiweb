@@ -1,7 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ulyan
- * Date: 05.09.2016
- * Time: 3:46
- */
+namespace Uiweb\Auth;
+
+use Uiweb\ServiceProvider;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    public function getDepencies()
+    {
+        return [
+            
+        ];
+    }
+
+    public function boot()
+    {
+
+    }
+
+    public function register()
+    {
+
+    }
+}

@@ -8,13 +8,11 @@ return [
     'connection' => 'mysql',
 
     'services' => [
-        
         'http' => [
-            
+            Uiweb\Http\HttpServiceProvider::class
         ],
-        
         'console' => [
-            
+            Uiweb\Console\ConsoleServiceProvider::class
         ]
     ]
 ];

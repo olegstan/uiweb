@@ -1,15 +1,11 @@
 <?php
-namespace Uiweb\Route;
+namespace Uiweb;
 
-use Uiweb\ServiceProvider;
-
-class RouteServiceProvider extends ServiceProvider
+class ServiceProvider
 {
     public function getDepencies()
     {
-        return [
-            
-        ];
+        return [];
     }
 
     public function boot()
@@ -20,5 +16,10 @@ class RouteServiceProvider extends ServiceProvider
     public function register()
     {
 
+    }
+
+    public function publish()
+    {
+        
     }
 }

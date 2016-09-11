@@ -14,7 +14,7 @@ class RouteCollection
     /**
      * @var array
      */
-    private static $routes_alice_map = [];
+    private static $routesAliceMap = [];
     /**
      * @var array
      */
@@ -35,7 +35,7 @@ class RouteCollection
     /**
      * @var Route
      */
-    public static $current_route;
+    public static $currentRoute;
 
     /**
      * @return $this
@@ -146,7 +146,7 @@ class RouteCollection
 
     public function setCurrentRoute(Route $route)
     {
-        return self::$current_route = $route;
+        return self::$currentRoute = $route;
     }
 
     /**
@@ -260,27 +260,27 @@ class RouteCollection
 
     public function getCurrent($method)
     {
-        if(!self::$current_route){
-            self::$current_route = self::getCurrentRoute();
+        if(!self::$currentRoute){
+            self::$currentRoute = self::getCurrentRoute();
         }
 
         switch($method)
         {
             case 'alice':
-                return self::$current_route->getAlice();
+                return self::$currentRoute->getAlice();
             case 'middleware':
-                return self::$current_route->getMiddleware();
+                return self::$currentRoute->getMiddleware();
             case 'controller':
-                return self::$current_route->getController();
+                return self::$currentRoute->getController();
             case 'method':
-                return self::$current_route->getMethod();
+                return self::$currentRoute->getMethod();
         }
     }
 
     public static function getRouteByAlice($alice)
     {
-        if(isset(self::$routes_alice_map[$alice])){
-            return self::$routes_alice_map[$alice];
+        if(isset(self::$routesAliceMap[$alice])){
+            return self::$routesAliceMap[$alice];
         }else{
             throw new NotFoundRouteException($alice);
         }
@@ -288,8 +288,8 @@ class RouteCollection
 
     public static function addRouteToMap(Route $route)
     {
-        if(!isset(self::$routes_alice_map[$route->getAlice()])){
-            self::$routes_alice_map[$route->getAlice()] = $route;
+        if(!isset(self::$routesAliceMap[$route->getAlice()])){
+            self::$routesAliceMap[$route->getAlice()] = $route;
         }else{
             throw new AliceDublicatException($route->getAlice());
         }

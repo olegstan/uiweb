@@ -24,6 +24,6 @@ require_once(ABS . '/vendor/autoload.php');
 //use Framework\Request\Request;
 //use Framework\Route\RouteCollection;
 
-Uiweb\Core::run();
+Uiweb\App::boot();
 
 //return (new FrontController(Request::getInstance(), RouteCollection::getInstance()))->init();

@@ -1,5 +1,5 @@
 <?php
-namespace Framework\Auth;
+namespace Uiweb\Auth;
 
 use Framework\Auth\User\User;
 use Framework\Pattern\PatternTraits\SingletonTrait;

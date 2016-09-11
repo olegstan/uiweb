@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: os
- * Date: 08.09.2016
- * Time: 11:59
- */
+return [
+    /**
+     * механизм хранения сессий
+     *
+     * 'files', 'mysql', 'redis'
+     */
+    'handler' => 'files'
+];
