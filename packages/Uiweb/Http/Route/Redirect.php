@@ -5,13 +5,6 @@ use core\Core;
 
 class Redirect
 {
-
-
-//    public function getCore()
-//    {
-//        return Core::getCore();
-//    }
-
     public function redirect($url = '', $status = 200)
     {
         header('HTTP/1.1 ' . $status . ' ' . $this->statuses[$status]);

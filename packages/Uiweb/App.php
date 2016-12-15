@@ -9,11 +9,18 @@ class App
     public static function boot()
     {
         self::resolveDependencies(self::getServiceProviders());
-        foreach (array_reverse(self::$pool) as $provider){
+        $reverse = array_reverse(self::$poolServiceProviders);
+        foreach ($reverse as $provider){
             /**
              * @var ServiceProvider $provider
              */
             $provider->boot();
+        }
+        foreach ($reverse as $provider){
+            /**
+             * @var ServiceProvider $provider
+             */
+            $provider->register();
         }
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace Uiweb\Route\Interfaces;
+namespace Uiweb\Http\Route\Interfaces;
 
 use Uiweb\Request\Interfaces\Requestable;
 use Closure;

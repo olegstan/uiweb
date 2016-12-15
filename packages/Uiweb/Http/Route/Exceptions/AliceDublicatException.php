@@ -1,5 +1,5 @@
 <?php
-namespace Uiweb\Route\Exceptions;
+namespace Uiweb\Http\Route\Exceptions;
 
 use Exception;
 

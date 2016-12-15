@@ -1,18 +1,18 @@
 <?php
-namespace Uiweb\Route;
+namespace Uiweb\Http\Route;
 
 use Uiweb\Config;
 use Uiweb\Request\Request;
 use Uiweb\Request\Types\HttpRequest;
 use Uiweb\Response\Response;
-use Uiweb\Route\Exceptions\NotFoundMethodException;
-use Uiweb\Route\RouteCollection;
+use Uiweb\Http\Route\Exceptions\NotFoundMethodException;
+use Uiweb\Http\Route\RouteCollection;
 use ReflectionClass;
 use ReflectionMethod;
 
 /**
  * Class RouteReflection
- * @package Uiweb\Route
+ * @package Uiweb\Http\Route
  */
 class RouteReflection extends ReflectionClass
 {
@@ -39,10 +39,9 @@ class RouteReflection extends ReflectionClass
      * @var array
      */
     public $middlewares = [];
-
-
     /**
-     * @param \Uiweb\Route\RouteCollection $route
+     * RouteReflection constructor.
+     * @param \Uiweb\Http\Route\RouteCollection $route
      */
     public function __construct(RouteCollection $route)
     {
@@ -58,15 +57,8 @@ class RouteReflection extends ReflectionClass
         $this->controller = $this->getRouteController();
         $this->method = $this->getRouteMethod();
         $this->parameters = $this->getRouteParameters();
+        $this->middlewares = array_unique(array_merge($this->getRouteMiddleware(), Config::get('middlewares.http')));
 
-        switch(Request::getType()){
-            case 'console':
-                $this->middlewares = array_unique(array_merge($this->getRouteMiddleware(), Config::get('middlewares', 'console')));
-                break;
-            case 'http':
-                $this->middlewares = array_unique(array_merge($this->getRouteMiddleware(), Config::get('middlewares', 'http')));
-                break;
-        }
 
         if($this->middlewares){
             foreach ($this->middlewares as $middleware) {
@@ -142,20 +134,17 @@ class RouteReflection extends ReflectionClass
                 $param_class = $parameter->getClass()->getName();
                 $method_params[$parameter->getName()] = new $param_class;
             }else{
-                switch(Request::getType()){
-                    case 'console':
-
-                        break;
-                    case 'http':
-                        $method_params[$parameter->getName()] = HttpRequest::getRoute($parameter->getName());
-                        break;
-                }
+                $method_params[$parameter->getName()] = HttpRequest::getRoute($parameter->getName());
+                break;
             }
         }
 
         return $method_params;
     }
 
+    /**
+     * @return mixed
+     */
     public function getRouteMiddleware()
     {
         return $this->route->getCurrentMiddleware();

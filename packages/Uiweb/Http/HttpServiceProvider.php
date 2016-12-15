@@ -1,9 +1,7 @@
 <?php
 namespace Uiweb\Http;
 
-use Uiweb\Auth\AuthServiceProvider;
-use Uiweb\FIleSystem\FileSystemServiceProvider;
-use Uiweb\Route\RouteServiceProvider;
+use Uiweb\Http\Route\RouteServiceProvider;
 use Uiweb\ServiceProvider;
 
 class HttpServiceProvider extends ServiceProvider
@@ -22,6 +20,6 @@ class HttpServiceProvider extends ServiceProvider
 
     public function register()
     {
-
+        
     }
 }

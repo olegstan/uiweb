@@ -1,5 +1,5 @@
 <?php
-namespace Uiweb\Route;
+namespace Uiweb\Http\Route;
 
 use Uiweb\ServiceProvider;
 

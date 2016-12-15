@@ -1,8 +1,8 @@
 <?php
-namespace Uiweb\Route;
+namespace Uiweb\Http\Route;
 /**
  * Class RouteGroup
- * @package Uiweb\Route
+ * @package Uiweb\Http\Route
  */
 class RouteGroup
 {

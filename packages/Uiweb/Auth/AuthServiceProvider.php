@@ -2,7 +2,7 @@
 namespace Uiweb\Auth;
 
 use Uiweb\Http\HttpServiceProvider;
-use Uiweb\Route\Route;
+use Uiweb\Http\Route\Route;
 use Uiweb\ServiceProvider;
 use Uiweb\Auth\Http\Controllers\UserController;
 

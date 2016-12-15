@@ -1,12 +1,12 @@
 <?php
-namespace Uiweb\Route;
+namespace Uiweb\Http\Route;
 
 use Uiweb\Request\Types\ConsoleRequest;
 use Uiweb\Request\Types\HttpRequest;
 use Uiweb\Pattern\PatternTraits\SingletonTrait;
 use Uiweb\Request\Request;
-use Uiweb\Route\Exceptions\AliceDublicatException;
-use Uiweb\Route\Exceptions\NotFoundRouteException;
+use Uiweb\Http\Route\Exceptions\AliceDublicatException;
+use Uiweb\Http\Route\Exceptions\NotFoundRouteException;
 
 class RouteCollection
 {
@@ -18,17 +18,14 @@ class RouteCollection
      * @var array
      */
     private static $routes = [
-        'http' => [
-            'GET' => [],
-            'POST' => [],
-            'PUT' => [],
-            'PATCH' => [],
-            'TRACE' => [],
-            'DELETE' => [],
-            'HEAD' => [],
-            'OPTIONS' => []
-        ],
-        'console' => []
+        'GET' => [],
+        'POST' => [],
+        'PUT' => [],
+        'PATCH' => [],
+        'TRACE' => [],
+        'DELETE' => [],
+        'HEAD' => [],
+        'OPTIONS' => []
     ];
 
     /**
@@ -37,26 +34,29 @@ class RouteCollection
     public static $currentRoute;
 
 
-    public function registerRoutes()
-    {
-        require_once(ABS . '/App/routes.php');
-    }
+//    public function registerRoutes()
+//    {
+//        require_once(ABS . '/App/routes.php');
+//    }
+//
+//    public function registerCommands()
+//    {
+//        require_once(ABS . '/App/commands.php');
+//    }
 
-    public function registerCommands()
-    {
-        require_once(ABS . '/App/commands.php');
-    }
-
+    /**
+     * @return $this
+     */
     public function registerFile()
     {
-        switch(Request::getType()){
-            case 'console':
-                $this->registerCommands();
-                break;
-            case 'http':
-                $this->registerRoutes();
-                break;
-        }
+//        switch(Request::getType()){
+//            case 'console':
+//                $this->registerCommands();
+//                break;
+//            case 'http':
+//                $this->registerRoutes();
+//                break;
+//        }
         return $this;
     }
 
@@ -87,15 +87,7 @@ class RouteCollection
     public static function registerSingle(Route $route)
     {
         self::addRouteToMap($route);
-
-        switch($route->getRequestType()){
-            case 'console':
-                self::$routes[$route->getRequestType()][] = $route;
-                break;
-            default:
-                self::$routes[$route->getRequestType()][$route->getRequestMethod()][] = $route;
-                break;
-        }
+        self::$routes[$route->getRequestType()][$route->getRequestMethod()][] = $route;
     }
 
     /**
@@ -110,21 +102,26 @@ class RouteCollection
         self::register((new Route('single', 'http', 'DELETE', $route->getRoute() . '/{id}', 'delete.' . $route->getAlice(), $route->getController(), 'delete' . $route->getMethod(), $route->getMiddleware()))->with(['id' => '[0-9]+']));
     }
 
+    /**
+     * @param Route $route
+     */
     public static function registerController(Route $route)
     {
 
     }
 
+    /**
+     * @return mixed
+     */
     public function getCurrentRequest()
     {
-        switch(Request::getType()){
-            case 'console':
-                return ConsoleRequest::getInstance();
-            case 'http':
-                return HttpRequest::getInstance();
-        }
+        return HttpRequest::getInstance();
     }
 
+    /**
+     * @return Route
+     * @throws NotFoundRouteException
+     */
     public function getCurrentRoute()
     {
         switch(Request::getType()){
@@ -135,6 +132,10 @@ class RouteCollection
         }
     }
 
+    /**
+     * @param Route $route
+     * @return Route
+     */
     public function setCurrentRoute(Route $route)
     {
         return self::$currentRoute = $route;
@@ -197,6 +198,11 @@ class RouteCollection
         }
     }
 
+    /**
+     * @param ConsoleRequest $request
+     * @return Route
+     * @throws NotFoundRouteException
+     */
     public function getCurrentConsoleRoute(ConsoleRequest $request)
     {
         if($routes = self::$routes['console']){
@@ -249,6 +255,10 @@ class RouteCollection
         return self::getCurrent('alice');
     }
 
+    /**
+     * @param $method
+     * @return array|string
+     */
     public function getCurrent($method)
     {
         if(!self::$currentRoute){
@@ -268,6 +278,11 @@ class RouteCollection
         }
     }
 
+    /**
+     * @param $alice
+     * @return mixed
+     * @throws NotFoundRouteException
+     */
     public static function getRouteByAlice($alice)
     {
         if(isset(self::$routesAliceMap[$alice])){
@@ -277,6 +292,10 @@ class RouteCollection
         }
     }
 
+    /**
+     * @param Route $route
+     * @throws AliceDublicatException
+     */
     public static function addRouteToMap(Route $route)
     {
         if(!isset(self::$routesAliceMap[$route->getAlice()])){
