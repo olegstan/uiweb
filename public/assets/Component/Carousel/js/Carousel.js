@@ -49,7 +49,7 @@ function Carousel (settings)
 
 
         if (!this.options.autoPlay) {
-            this.play();
+            //this.play();
         }
     }
 }
@@ -83,7 +83,7 @@ Carousel.prototype.generateItems = function ()
             });
 
             nodes[i].addEventListener("touchmove", function(e){
-                //e.preventDefault();
+                self.pause();
             });
 
             nodes[i].addEventListener("mouseover", function(e){
